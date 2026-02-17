@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Illam - Authentic Kerala Cuisine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .blob-shape {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+            animation: blob-bounce 10s infinite ease-in-out;
+        }
+        @keyframes blob-bounce {
+            0%, 100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: translate(0, 0); }
+            33% { border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; transform: translate(10px, -10px); }
+            66% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: translate(-5px, 10px); }
+        }
+    </style>
+</head>
+<body class="bg-[#53151b] text-[#EDD8BC] font-body">
+    <!-- SVG Icons -->
+    <svg style="display: none;">
+        <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v12M8 12h8"/></symbol>
+        <symbol id="icon-restaurant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2M7 2v20M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+        <symbol id="icon-fire" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.5 3 4 5 4 8 0 2.2-1.8 4-4 4s-4-1.8-4-4c0-3 2.5-5 4-8zm0 18c-3.3 0-6-2.7-6-6 0-1.5.5-3 1.5-4.2C8.5 11.5 10 13 12 13s3.5-1.5 4.5-3.2c1 1.2 1.5 2.7 1.5 4.2 0 3.3-2.7 6-6 6z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></symbol>
+        <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+        <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></symbol>
+    </svg>
+    <!-- Navbar -->
+    <nav class="fixed w-full backdrop-blur-sm bg-[#53151b]/90 border-b border-[#EDD8BC]/10 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <img src="images/logojpeg.jpeg" alt="Namma Illam" class="h-12">
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white border-b-2 border-[#EDD8BC] px-3 py-2">Home</a>
+                    <a href="about.html" class="text-[#EDD8BC] hover:text-white transition px-3 py-2">About</a>
+                    <a href="menu.html" class="text-[#EDD8BC] hover:text-white transition px-3 py-2">Menu</a>
+                    <a href="gallery.html" class="text-[#EDD8BC] hover:text-white transition px-3 py-2">Gallery</a>
+                    <a href="contact.html" class="text-[#EDD8BC] hover:text-white transition px-3 py-2">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-[#EDD8BC]">
+                    <svg class="w-8 h-8"><use href="#icon-menu"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-[#53151b] shadow-2xl z-50 transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <button id="close-menu" class="text-[#EDD8BC] mb-8">
+                <svg class="w-8 h-8"><use href="#icon-close"/></svg>
+            </button>
+            <nav class="flex flex-col space-y-6">
+                <a href="index.html" class="text-white text-lg">Home</a>
+                <a href="about.html" class="text-[#EDD8BC] text-lg hover:text-white">About</a>
+                <a href="menu.html" class="text-[#EDD8BC] text-lg hover:text-white">Menu</a>
+                <a href="gallery.html" class="text-[#EDD8BC] text-lg hover:text-white">Gallery</a>
+                <a href="contact.html" class="text-[#EDD8BC] text-lg hover:text-white">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#962D38] opacity-20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-[#962D38] opacity-10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left space-y-8">
+                    <span class="inline-block py-1 px-3 rounded-full bg-[#EDD8BC]/10 border border-[#EDD8BC]/20 text-[#EDD8BC] text-sm font-semibold tracking-widest uppercase">Tasty & Healthy</span>
+                    <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight text-[#EDD8BC] drop-shadow-lg">
+                        The Crispiest<br>
+                        <span class="text-white italic">Dosa</span> in<br>
+                        Alappuzha
+                    </h1>
+                    <p class="text-lg text-[#EDD8BC]/80 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
+                        Experience the authentic taste of Kerala with our hand-ground batter and traditional recipes. Every bite is a journey to the backwaters.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="contact.html" class="group inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[#53151b] bg-[#EDD8BC] rounded-full hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(237,216,188,0.3)]">
+                            Location
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"><use href="#icon-location"/></svg>
+                        </a>
+                        <a href="about.html" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-[#EDD8BC] border border-[#EDD8BC]/30 rounded-full hover:bg-[#EDD8BC]/10 transition-colors">
+                            <svg class="w-5 h-5 mr-2"><use href="#icon-play"/></svg>
+                            Our Story
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-lg aspect-square">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#962D38] to-[#7a232c] blob-shape opacity-80 transform rotate-12 scale-110"></div>
+                        <div class="absolute inset-0 bg-[#EDD8BC]/10 blob-shape transform -rotate-6 scale-95 blur-sm"></div>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB14SRxXkIfFuTpg-TVR-KkdrcYCm1q2dYe4EQkwSKCnP5MdPoG4RGN_w9D7zNfzSFM8iQpcc3Y59XsjmdBjWOt8awkOOmPoHY3jDsbStugOqa9VC09lSXNY48gGheqzKocCgOnzTrguF_SPrbV-IHLs_PYGANo6lYlXMqpa61j1BAFrzcH4iAA9StPMDEDNLvIKsQRSfx-OZfeCnIUVsu2N_qhvB7hVG2CG329Sc6vzFtuO_096NMEudBNt9ZegbuDwJ483JC1U9U" alt="Golden Crispy Dosa" class="relative z-10 w-full h-full object-cover blob-shape shadow-2xl transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute -top-4 -right-4 z-20 bg-white p-4 rounded-full shadow-xl animate-bounce" style="animation-duration: 3s;">
+                            <div class="text-[#53151b] font-bold text-center leading-none">
+                                <span class="text-2xl font-display">4.9</span>
+                                <div class="flex text-yellow-500 text-xs mt-1 gap-0.5">
+                                    <svg class="w-3 h-3"><use href="#icon-star"/></svg>
+                                    <svg class="w-3 h-3"><use href="#icon-star"/></svg>
+                                    <svg class="w-3 h-3"><use href="#icon-star"/></svg>
+                                    <svg class="w-3 h-3"><use href="#icon-star"/></svg>
+                                    <svg class="w-3 h-3"><use href="#icon-star"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 transition-all group text-center">
+                    <div class="w-16 h-16 mx-auto bg-[#EDD8BC]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#EDD8BC] group-hover:text-[#53151b] transition-colors text-[#EDD8BC]">
+                        <svg class="w-8 h-8"><use href="#icon-leaf"/></svg>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-[#EDD8BC] mb-3">100% Pure Veg</h3>
+                    <p class="text-[#EDD8BC]/70 text-sm leading-relaxed">Strictly vegetarian kitchen ensuring purity and traditional sanctity in every meal we serve.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 transition-all group text-center transform md:-translate-y-4">
+                    <div class="w-16 h-16 mx-auto bg-[#EDD8BC]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#EDD8BC] group-hover:text-[#53151b] transition-colors text-[#EDD8BC]">
+                        <svg class="w-8 h-8"><use href="#icon-restaurant"/></svg>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-[#EDD8BC] mb-3">Traditional Recipe</h3>
+                    <p class="text-[#EDD8BC]/70 text-sm leading-relaxed">Secret spice blends passed down through generations, maintaining the authentic taste of old Kerala.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 transition-all group text-center">
+                    <div class="w-16 h-16 mx-auto bg-[#EDD8BC]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#EDD8BC] group-hover:text-[#53151b] transition-colors text-[#EDD8BC]">
+                        <svg class="w-8 h-8"><use href="#icon-home"/></svg>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-[#EDD8BC] mb-3">Kerala Ambience</h3>
+                    <p class="text-[#EDD8BC]/70 text-sm leading-relaxed">Dine in a setting that reflects the serenity of backwaters and the warmth of Malayali hospitality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Menu -->
+    <section class="py-24 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-[#EDD8BC]/60 font-body uppercase tracking-widest text-sm">Our Specialties</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-[#EDD8BC] mt-2">Explore The Menu</h2>
+                <p class="max-w-xl mx-auto mt-4 text-[#EDD8BC]/70 font-light">Authentic flavors crafted with care, tradition, and the finest ingredients.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-[#EDD8BC]/10 overflow-hidden hover:border-[#EDD8BC]/40 transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500" alt="Podi Dosa" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-[#EDD8BC] text-[#53151b] font-bold text-sm px-3 py-1 rounded-full shadow-lg">₹70</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-[#EDD8BC] mb-2">Podi Dosa</h3>
+                        <p class="text-[#EDD8BC]/70 text-sm leading-relaxed mb-4">Crispy crepe sprinkled with our signature spice mix made of lentils and red chilies.</p>
+                        <div class="flex justify-between items-center border-t border-[#EDD8BC]/10 pt-4">
+                            <span class="text-xs text-[#EDD8BC]/50 uppercase tracking-widest font-bold">Chef's Special</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-[#EDD8BC]/10 overflow-hidden hover:border-[#EDD8BC]/40 transition-all duration-300 transform lg:-translate-y-4 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)]">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 bg-[#EDD8BC] text-[#53151b] text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-b-lg shadow-md">Signature</div>
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500" alt="Benne Dosa" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="flex items-center gap-1 text-yellow-400 mb-1">
+                                <svg class="w-4 h-4"><use href="#icon-star"/></svg>
+                                <svg class="w-4 h-4"><use href="#icon-star"/></svg>
+                                <svg class="w-4 h-4"><use href="#icon-star"/></svg>
+                                <svg class="w-4 h-4"><use href="#icon-star"/></svg>
+                                <svg class="w-4 h-4"><use href="#icon-star"/></svg>
+                                <span class="text-xs ml-1">(2.1k)</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-[#EDD8BC] text-[#53151b] font-bold text-sm px-3 py-1 rounded-full shadow-lg">₹80</div>
+                    </div>
+                    <div class="p-6 bg-gradient-to-b from-transparent to-black/20">
+                        <h3 class="text-2xl font-display font-bold text-[#EDD8BC] mb-2">Benne Dosa</h3>
+                        <p class="text-[#EDD8BC]/70 text-sm leading-relaxed mb-4">Thick, fluffy, and generously roasted with pure white butter.</p>
+                        <div class="flex justify-between items-center border-t border-[#EDD8BC]/10 pt-4">
+                            <span class="text-xs text-[#EDD8BC]/50 uppercase tracking-widest font-bold">Must Try</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-[#EDD8BC]/10 overflow-hidden hover:border-[#EDD8BC]/40 transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=500" alt="Masala Dosa" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-[#EDD8BC] text-[#53151b] font-bold text-sm px-3 py-1 rounded-full shadow-lg">₹90</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-[#EDD8BC] mb-2">Masala Dosa</h3>
+                        <p class="text-[#EDD8BC]/70 text-sm leading-relaxed mb-4">Golden crispy crepe stuffed with a savory spiced potato and onion filling.</p>
+                        <div class="flex justify-between items-center border-t border-[#EDD8BC]/10 pt-4">
+                            <span class="text-xs text-[#EDD8BC]/50 uppercase tracking-widest font-bold">Classic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <a href="menu.html" class="group inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[#EDD8BC] border border-[#EDD8BC]/30 rounded-full hover:bg-[#EDD8BC] hover:text-[#53151b] transition-all duration-300">
+                    View Full Menu
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"><use href="#icon-arrow-right"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-20 bg-[#962D38]/10 relative overflow-hidden">
+        <div class="absolute -left-10 top-1/2 transform -translate-y-1/2 text-[20rem] font-display text-[#EDD8BC]/5 opacity-20 pointer-events-none">"</div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <div class="mb-8 flex justify-center text-[#EDD8BC]">
+                <svg class="w-12 h-12"><use href="#icon-quote"/></svg>
+            </div>
+            <p class="text-2xl md:text-3xl font-display font-light text-white italic mb-8 leading-normal">
+                "The Masala Dosa here reminds me of my grandmother's cooking. The crispiness is perfect, and the sambar has that authentic Kerala kick. Absolutely delightful!"
+            </p>
+            <div class="flex items-center justify-center gap-4">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Customer" class="w-12 h-12 rounded-full border-2 border-[#EDD8BC]">
+                <div class="text-left">
+                    <h4 class="text-[#EDD8BC] font-bold">Arjun Nair</h4>
+                    <p class="text-[#EDD8BC]/60 text-xs uppercase tracking-wide">Food Blogger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 pt-16 pb-8 border-t border-[#EDD8BC]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="font-display text-2xl font-bold text-[#EDD8BC] tracking-wider block mb-6">Namma Illam</span>
+                    <p class="text-[#EDD8BC]/60 text-sm leading-relaxed mb-6">Bringing the authentic taste of Kerala to your plate with love, tradition, and purity.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#EDD8BC]/10 flex items-center justify-center text-[#EDD8BC] hover:bg-[#EDD8BC] hover:text-[#53151b] transition-colors">
+                            <svg class="w-5 h-5"><use href="#icon-facebook"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/nammaillamofficial?igsh=M3Fncmt1ZGVvYmZi" target="_blank" class="w-10 h-10 rounded-full bg-[#EDD8BC]/10 flex items-center justify-center text-[#EDD8BC] hover:bg-[#EDD8BC] hover:text-[#53151b] transition-colors">
+                            <svg class="w-5 h-5"><use href="#icon-instagram"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#EDD8BC]/10 flex items-center justify-center text-[#EDD8BC] hover:bg-[#EDD8BC] hover:text-[#53151b] transition-colors">
+                            <svg class="w-5 h-5"><use href="#icon-twitter"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-[#EDD8BC]/70">
+                        <li><a href="index.html" class="hover:text-[#EDD8BC] transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#EDD8BC] transition-colors">About Us</a></li>
+                        <li><a href="menu.html" class="hover:text-[#EDD8BC] transition-colors">Menu</a></li>
+                        <li><a href="contact.html" class="hover:text-[#EDD8BC] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-[#EDD8BC]/70">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#EDD8BC] flex-shrink-0"><use href="#icon-location"/></svg>
+                            <span>Alappuzha, Kerala, 688001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#EDD8BC] flex-shrink-0"><use href="#icon-phone"/></svg>
+                            <span>+91 97443 83621</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#EDD8BC] flex-shrink-0"><use href="#icon-mail"/></svg>
+                            <span>nammaillamofficial@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-[#EDD8BC]/10 pt-8 text-center">
+                <p class="text-[#EDD8BC]/40 text-xs"> 2026 Namma Illam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919744383621" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform">
+        <svg class="w-7 h-7"><use href="#icon-whatsapp"/></svg>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+</html>
+
+

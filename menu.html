@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Namma Illam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #53151b; }
+        ::-webkit-scrollbar-thumb { background: #EDD8BC; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4c4a8; }
+    </style>
+</head>
+<body class="bg-[#53151b] text-[#EDD8BC] font-body">
+    <!-- SVG Icons -->
+    <svg style="display: none;">
+        <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v12M8 12h8"/></symbol>
+        <symbol id="icon-restaurant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2M7 2v20M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+        <symbol id="icon-fire" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.5 3 4 5 4 8 0 2.2-1.8 4-4 4s-4-1.8-4-4c0-3 2.5-5 4-8zm0 18c-3.3 0-6-2.7-6-6 0-1.5.5-3 1.5-4.2C8.5 11.5 10 13 12 13s3.5-1.5 4.5-3.2c1 1.2 1.5 2.7 1.5 4.2 0 3.3-2.7 6-6 6z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></symbol>
+        <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+        <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></symbol>
+    </svg>
+    
+    <!-- Decorative Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-[#EDD8BC] opacity-[0.03] rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 -right-20 w-64 h-64 bg-[#EDD8BC] opacity-[0.02] rounded-full blur-2xl"></div>
+        <div class="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#EDD8BC] opacity-[0.04] rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#53151b]/80 border-b border-[#EDD8BC]/10">
+            <div class="max-w-6xl mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-8 h-8"><use href="#icon-restaurant"/></svg>
+                        <h1 class="text-xl md:text-2xl font-display font-bold tracking-tight text-[#EDD8BC] uppercase">Namma Illam</h1>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-10">
+                        <a href="index.html" class="text-[#EDD8BC] text-sm font-medium hover:text-white transition">Home</a>
+                        <a href="about.html" class="text-[#EDD8BC] text-sm font-medium hover:text-white transition">About</a>
+                        <a href="menu.html" class="text-[#EDD8BC] font-bold text-sm border-b border-[#EDD8BC] pb-0.5">Menu</a>
+                        <a href="gallery.html" class="text-[#EDD8BC] text-sm font-medium hover:text-white transition">Gallery</a>
+                        <a href="contact.html" class="text-[#EDD8BC] text-sm font-medium hover:text-white transition">Contact</a>
+                    </nav>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full hover:bg-[#EDD8BC]/10">
+                        <svg class="w-6 h-6"><use href="#icon-menu"/></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-[#53151b] shadow-2xl z-50 transform translate-x-full transition-transform duration-300 border-l border-[#EDD8BC]/10">
+            <div class="p-6">
+                <button id="close-menu" class="mb-8">
+                    <svg class="w-8 h-8"><use href="#icon-close"/></svg>
+                </button>
+                <nav class="flex flex-col space-y-6">
+                    <a href="index.html" class="text-[#EDD8BC] text-lg hover:text-white">Home</a>
+                    <a href="about.html" class="text-[#EDD8BC] text-lg hover:text-white">About</a>
+                    <a href="menu.html" class="text-white text-lg">Menu</a>
+                    <a href="gallery.html" class="text-[#EDD8BC] text-lg hover:text-white">Gallery</a>
+                    <a href="contact.html" class="text-[#EDD8BC] text-lg hover:text-white">Contact</a>
+                    <div class="h-[1px] bg-[#EDD8BC]/10 my-4"></div>
+                    <a href="#idli" class="text-[#d4c4a8] text-sm hover:text-[#EDD8BC]">Idli</a>
+                    <a href="#dosa" class="text-[#d4c4a8] text-sm hover:text-[#EDD8BC]">Dosa</a>
+                    <a href="#signature" class="text-[#d4c4a8] text-sm hover:text-[#EDD8BC]">Signature</a>
+                    <a href="#beverages" class="text-[#d4c4a8] text-sm hover:text-[#EDD8BC]">Beverages</a>
+                    <a href="#snacks" class="text-[#d4c4a8] text-sm hover:text-[#EDD8BC]">Snacks</a>
+                    <a href="#munch" class="text-[#d4c4a8] text-sm hover:text-[#EDD8BC]">To Munch</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="max-w-[960px] mx-auto px-4 md:px-8 pt-8 pb-20">
+            <!-- Hero Header -->
+            <div class="text-center space-y-4 pt-4 mb-12">
+                <p class="text-[#d4c4a8] text-sm uppercase tracking-[0.2em] font-medium">Fine Vegetarian Dining</p>
+                <h2 class="text-4xl md:text-6xl font-display font-light text-[#EDD8BC]">The Taste of Heritage</h2>
+                <div class="w-24 h-[1px] bg-[#EDD8BC]/30 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sticky top-[73px] z-40 bg-[#53151b]/95 backdrop-blur-sm py-4 border-b border-[#EDD8BC]/10 mb-12">
+                <div class="flex justify-center gap-6 md:gap-12 overflow-x-auto">
+                    <a href="#idli" class="flex flex-col items-center group min-w-fit">
+                        <span class="text-[#EDD8BC] font-semibold text-sm md:text-base group-hover:text-white transition">Idli</span>
+                        <span class="h-[2px] w-full bg-[#EDD8BC] mt-2"></span>
+                    </a>
+                    <a href="#dosa" class="flex flex-col items-center group min-w-fit">
+                        <span class="text-[#d4c4a8] font-medium text-sm md:text-base group-hover:text-[#EDD8BC] transition">Dosa</span>
+                        <span class="h-[2px] w-full bg-[#EDD8BC] mt-2 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="#signature" class="flex flex-col items-center group min-w-fit">
+                        <span class="text-[#d4c4a8] font-medium text-sm md:text-base group-hover:text-[#EDD8BC] transition">Signature</span>
+                        <span class="h-[2px] w-full bg-[#EDD8BC] mt-2 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="#beverages" class="flex flex-col items-center group min-w-fit">
+                        <span class="text-[#d4c4a8] font-medium text-sm md:text-base group-hover:text-[#EDD8BC] transition">Beverages</span>
+                        <span class="h-[2px] w-full bg-[#EDD8BC] mt-2 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="#snacks" class="flex flex-col items-center group min-w-fit">
+                        <span class="text-[#d4c4a8] font-medium text-sm md:text-base group-hover:text-[#EDD8BC] transition">Snacks</span>
+                        <span class="h-[2px] w-full bg-[#EDD8BC] mt-2 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="#munch" class="flex flex-col items-center group min-w-fit">
+                        <span class="text-[#d4c4a8] font-medium text-sm md:text-base group-hover:text-[#EDD8BC] transition">To Munch</span>
+                        <span class="h-[2px] w-full bg-[#EDD8BC] mt-2 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- IDLI -->
+            <section id="idli" class="space-y-8 scroll-mt-32 mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <svg class="w-6 h-6"><use href="#icon-restaurant"/></svg>
+                    <h3 class="text-2xl font-display font-light text-[#EDD8BC] tracking-wide">IDLI</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=500" alt="Set Idli" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Set idli (3pc)</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹60</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Soft steamed rice cakes served with sambar and coconut chutney.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Thattu idli.jpg" alt="Thattu Idli" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Thattu idli</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹60</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Button idlis served on a plate with traditional accompaniments.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Podi Thattu idli.jpg" alt="Podi Thattu Idli" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Podi Thattu idli</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹70</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Button idlis tossed in spicy podi powder.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Ghee Podi Thattu idli.jpg" alt="Ghee Podi Thattu Idli" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Ghee Podi Thattu idli</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹90</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Button idlis with podi and drizzled with pure ghee.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-[1px] w-full bg-[#EDD8BC]/10 mb-16"></div>
+
+            <!-- DOSA -->
+            <section id="dosa" class="space-y-8 scroll-mt-32 mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <svg class="w-6 h-6"><use href="#icon-star"/></svg>
+                    <h3 class="text-2xl font-display font-light text-[#EDD8BC] tracking-wide">DOSA</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Plain dosa.jpg" alt="Plain Dosa" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Plain dosa</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹60</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Crispy golden crepe made from fermented rice batter.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Ghee roast.jpg" alt="Ghee Roast" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Ghee roast</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹70</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Paper thin dosa roasted in clarified butter.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Masala dosa -.jpg" alt="Masala Dosa" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Masala dosa</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹90</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Dosa filled with spiced potato masala.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-[1px] w-full bg-[#EDD8BC]/10 mb-16"></div>
+
+            <!-- OUR SIGNATURE ITEMS -->
+            <section id="signature" class="space-y-8 scroll-mt-32 mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <svg class="w-6 h-6"><use href="#icon-star"/></svg>
+                    <h3 class="text-2xl font-display font-light text-[#EDD8BC] tracking-wide">OUR SIGNATURE ITEMS</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Thattu idli.jpg" alt="Thattu Idli" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Thattu idli</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹60</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Our signature button idlis.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Ghee Podi Thattu idli.jpg" alt="Ghee Podi Thattu Idli" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Ghee Podi Thattu idli</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹90</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Signature idlis with ghee and podi.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Benne dosa.jpg" alt="Benne Dosa" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Benne dosa</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹80</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Butter dosa with crisp exterior and soft core.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Benne dosa.jpg" alt="Benne Podi Dosa" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Benne podi dosa</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹100</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Butter dosa with spicy podi powder.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Masala dosa -.jpg" alt="Benne Masala Dosa" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Benne masala dosa</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹120</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Butter dosa with potato masala filling.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="images/Benne dosa.jpg" alt="Benne Podi Masala Dosa" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Benne podi masala dosa</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹140</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Butter dosa with podi and masala filling.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-[1px] w-full bg-[#EDD8BC]/10 mb-16"></div>
+
+            <!-- BEVERAGES -->
+            <section id="beverages" class="space-y-8 scroll-mt-32 mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <svg class="w-6 h-6"><use href="#icon-star"/></svg>
+                    <h3 class="text-2xl font-display font-light text-[#EDD8BC] tracking-wide">BEVERAGES</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=500" alt="Chai" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Chai</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹25</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Traditional Indian spiced tea.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=500" alt="Coffee" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Coffee</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹25</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Fresh brewed coffee.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=500" alt="Filter Coffee" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Filter coffee</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹30</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Traditional South Indian filter coffee.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=500" alt="Cold Filter Coffee" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Cold filter Coffee</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹35</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Chilled filter coffee.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=500" alt="Sambaram" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Sambaram</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹20</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Spiced buttermilk.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=500" alt="Rasam" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Rasam</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹15</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Tangy South Indian soup.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-[1px] w-full bg-[#EDD8BC]/10 mb-16"></div>
+
+            <!-- SNACKS -->
+            <section id="snacks" class="space-y-8 scroll-mt-32 mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <svg class="w-6 h-6"><use href="#icon-restaurant"/></svg>
+                    <h3 class="text-2xl font-display font-light text-[#EDD8BC] tracking-wide">SNACKS</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Vada" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Vada</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹12</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Crispy lentil fritters.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=500" alt="Parippuvada" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Parippuvada</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹15</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Dal fritters with spices.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Rasavada" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Rasavada</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹18</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Vada soaked in rasam.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-[1px] w-full bg-[#EDD8BC]/10 mb-16"></div>
+
+            <!-- TO MUNCH -->
+            <section id="munch" class="space-y-8 scroll-mt-32 mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <svg class="w-6 h-6"><use href="#icon-star"/></svg>
+                    <h3 class="text-2xl font-display font-light text-[#EDD8BC] tracking-wide">TO MUNCH</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=500" alt="Mangalorean Murukku" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Mangalorean Murukku</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹30</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Traditional spiral rice crackers.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=500" alt="Cut Biscuit" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Cut Biscuit</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹35</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Crispy savory biscuits.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=500" alt="Jackfruit Chips" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Jackfruit Chips</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹45</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Crispy jackfruit chips.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=500" alt="Kara Banana Chips" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Kara Banana Chips (Spicy)</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹40</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Spicy banana chips.</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/5 p-6 rounded-lg border border-[#EDD8BC]/10 hover:border-[#EDD8BC]/30 hover:bg-white/10 transition-all">
+                        <div class="shrink-0">
+                            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-[#EDD8BC]/20 group-hover:border-[#EDD8BC]/50 shadow-lg transition-all transform group-hover:scale-105">
+                                <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=500" alt="Regular Banana Chips" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2">
+                                <h4 class="text-xl font-medium text-[#EDD8BC]">Regular Banana Chips</h4>
+                                <span class="text-[#EDD8BC] font-bold text-lg">₹40</span>
+                            </div>
+                            <p class="text-[#d4c4a8]/80 text-sm leading-relaxed font-light italic">Classic Kerala banana chips.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <div class="py-10 text-center text-[#d4c4a8]/60 text-sm font-light">
+                <p>Prices are exclusive of taxes. Service charge optional.</p>
+                <p class="mt-2 text-xs uppercase tracking-widest">Namma Illam © 2024</p>
+            </div>
+        </main>
+    </div>
+
+    <a href="https://wa.me/919876543210" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform">
+        <svg class="w-7 h-7"><use href="#icon-whatsapp"/></svg>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+</html>
+
+
