@@ -11,6 +11,8 @@
         ::-webkit-scrollbar-track { background: #53151b; }
         ::-webkit-scrollbar-thumb { background: #EDD8BC; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #d4c4a8; }
+        .animate-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .animate-in { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-[#53151b] text-[#EDD8BC] font-body">
@@ -622,6 +624,7 @@
             mobileMenu.classList.add('translate-x-full');
         });
     </script>
+    <script src="scroll-animations.js"></script>
 </body>
 </html>
 

@@ -6,6 +6,10 @@
     <title>Contact - Namma Illam</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .animate-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .animate-in { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
 <body class="bg-[#53151b] text-[#EDD8BC] font-body">
     <!-- SVG Icons -->
@@ -215,6 +219,7 @@
             mobileMenu.classList.add('translate-x-full');
         });
     </script>
+    <script src="scroll-animations.js"></script>
 </body>
 </html>
 
